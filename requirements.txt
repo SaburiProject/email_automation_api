@@ -1,0 +1,11 @@
+langchain
+langchain-huggingface
+langchain-pinecone
+pinecone-client
+sentence-transformers
+langchain-community
+flask
+langchain-groq
+langchain-core
+python-dotenv
+gunicorn
