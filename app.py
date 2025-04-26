@@ -18,7 +18,7 @@ app = Flask(__name__)
 embedding_model = HuggingFaceEmbeddings()
 
 # Initialize Pinecone
-PINECONE_API_KEY = "pcsk_475ix6_QNMj2etqYWbrUz2aKFQebCPzCepmZEsZFoWsMG3wjYvFaxdUFu73h7GWbieTeti"
+PINECONE_API_KEY = "ENTER_KEY"
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index("ahlchatbot-customer")
 
@@ -27,7 +27,7 @@ vector_store = PineconeVectorStore(index=index, embedding=embedding_model)
 retriever = vector_store.as_retriever(search_kwargs={"k": 3})
 
 # Initialize LLM
-llm = ChatGroq(model="llama-3.3-70b-versatile", api_key="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")
+llm = ChatGroq(model="llama-3.3-70b-versatile", api_key="ENTER_KEY")
 
 # Custom Prompt Template for Email Inquiry
 custom_prompt_template = """
